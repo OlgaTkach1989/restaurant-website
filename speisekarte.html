@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>SPEISEKARTE</title>
 </head>
 <body>
         <header>
         <h1>Rocco-Restaurant</h1>
         <p>Traditionelle Küche seit 1952</p>
         <nav aria-label="Hauptnavigation">
-            <ul>
+            <ul class="navigation">
                 <li><a href="index.html" >Homepage</a></li>
                 <li><a href="speisekarte.html" aria-current="page">Menü & Preise</a></li>
                 <li><a href="ueber-uns.html">Geschichte & Team</a></li>
@@ -21,7 +22,7 @@
         </nav>
         <h2>Vorspeisen</h2>
         <table border="1">
-            <caption>Unsere köstlichen Vorspeisen</caption>
+            <caption class="tisch-caption">Unsere köstlichen Vorspeisen</caption>
             <thead>
                 <tr>
                     <th scope="col">Gericht</th>
@@ -59,7 +60,7 @@
         </table>
         <h2>Hauptgerichte</h2>
         <table border="1">
-            <caption>Unsere bekannte Hauptgerichte</caption>
+            <caption class="tisch-caption">Unsere bekannte Hauptgerichte</caption>
             <thead>
                 <tr>
                     <th scope="col">Gericht</th>
@@ -108,7 +109,7 @@
             </tbody>
         </table>
         <h3>Allergen-Legende</h3>
-        <dl>
+        <dl class="allergien">
             <dt>A</dt>
             <dd>Glutenhaltiges Getreide</dd>
 

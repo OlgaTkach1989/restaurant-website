@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>RESERVIERUNG</title>
 </head>
 <body>
             <header>
         <h1>Rocco-Restaurant</h1>
         <p>Traditionelle Küche seit 1952</p>
         <nav aria-label="Hauptnavigation">
-            <ul>
+            <ul class="navigation">
                 <li><a href="index.html" >Homepage</a></li>
                 <li><a href="speisekarte.html">Menü & Preise</a></li>
                 <li><a href="ueber-uns.html">Geschichte & Team</a></li>
@@ -19,10 +20,13 @@
                 <li><a href="kontakt.html">Kontakt & Öffnungszeiten</a></li>
             </ul>
         </nav>
-        <h1>Reservierung</h1>
+        <h2>Reservierung</h2>
+        <br>
         <form action="/reservieren" method="post">
-            <fieldset>
-                <legend>Ihre Kontaktdaten</legend>
+            <fieldset class="reservierung">
+                
+                <legend class="legend">Ihre Kontaktdaten</legend>
+                <div class="reservierung-box">
                 <label for="voname">Vorname:</label>
                 <input type="text" id="vorname" name="vorname" required placeholder="Max"><br>
                 <br>
@@ -34,9 +38,13 @@
                 <br>
                 <label for="telefon">Telefon:</label>
                 <input type="tel" id="telefon" name="telefon" required placeholder="017...">
+                </div>
             </fieldset>
-            <fieldset>
-                <legend>Reservierungsdetails</legend>
+            
+            <br>
+            <fieldset class="reservierung">
+                <legend class="legend">Reservierungsdetails</legend>
+                <div class="reservierung-box">
                 <label for="datum">Datum:</label> 
                 <input type="date" id="datum" name="datum" min="heute" required><br>
                 <br>
@@ -51,34 +59,46 @@
                 <br>
                 <label for="personen">Personenzehl:</label>
                 <input type="number" id="personen" name="personen" min="1" max="12" required> <br>
+                </div>
             </fieldset>
-            <fieldset>
-                <legend>Anlass</legend>
+            <br>
+            <fieldset class="reservierung">
+            <legend class="legend">Anlass</legend>
+            <div class="reservierung-box">
             <label><input type="radio" name="occasion" value="gemütlich" required>Gemütlich</label><br>
             <label><input type="radio" name="occasion" value="business" required>Busines</label><br>
             <label><input type="radio" name="occasion" value="feier" required>Feier</label><br>
             <label><input type="radio" name="occasion" value="romantisch" required>Romantisch</label><br>
+            </div>
             </fieldset>
-            <fieldset>
-                <legend>Besondere Wünsche</legend>
+            <br>
+            <fieldset class="reservierung">
+                <legend class="legend">Besondere Wünsche</legend>
+                <div class="reservierung-box">
                 <label><input type="checkbox" name="preferences[]" value="fensterplatz">Fensterplatz</label><br>
                 <label><input type="checkbox" name="preferences[]" value="ruhig">Ruhig</label><br>
                 <label><input type="checkbox" name="preferences[]" value="rollstuhlgerecht">Rollstuhlgerecht</label><br>
                 <label><input type="checkbox" name="preferences[]" value="kinderstuhl">Kinderstuhl</label>
+                </div>
             </fieldset>
-            <fieldset>
-                <legend>Allergien und weitere Wünschen</legend>
+            <br>
+            <fieldset class="reservierung">
+                <legend class="legend">Allergien und weitere Wünschen</legend>
+                <div class="reservierung-box">
                 <label for="allergien">Allergien/Unverträglichkeiten</label><br>
                 <textarea name="allergien" id="allergien" rows="10" cols="70" placeholder="z.B. keine Nüsse, keine Laktose"></textarea><br>
                 <br>
                 <label for="wünsche">Weitere Wünsche:</label> <br>
                 <textarea name="wünsche" id="wünsche" rows="10" cols="70" placeholder="z.B. Geburtstag, Hochzeitstag, etc."></textarea>
+                </div>
             </fieldset>
-            <fieldset>
-                <legend>Rechtliches</legend>
+            <br>
+            <fieldset class="reservierung">
+                <legend class="legend">Rechtliches</legend>
+                <div class="reservierung-box">
                 <label><input type="checkbox" name="agb" required>Ich akzeptiere die AGB</label><br>
                 <label><input type="checkbox" name="newsletter">Ich möchte den Newsletter erhalten.</label>
-
+                </div>
             </fieldset>
         </form>
     </header>
