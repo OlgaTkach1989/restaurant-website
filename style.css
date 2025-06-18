@@ -1,20 +1,42 @@
+
 body {
     background-color: rgba(165, 42, 42, 0.351);
     background-image: url("https://www.pier7.de/wordpress/wp-content/uploads/2021/03/AdobeStock_113840431-scaled-e1617186169903.jpeg");
 
 }
 
+@media (max-width: 768px) {
+    body {
+        /* Wir überschreiben das alte Grid-Layout */
+        grid-template-columns: 1fr; /* Nur noch eine Spalte! */
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+}
+
 
 
 h1 {
     font-family: Georgia, serif;
-    font-size: 42px;
+    font-size: 70px;
     font-weight: bold;
     color: rgb(218, 16, 16);
     background-color: rgb(205, 125, 125);
     text-align: center;
     border-radius: 10px;
 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px; /* Kleiner als die Standard-Größe für Desktops */
+    }
+
+    body {
+        font-size: 14px; /* Ggf. den Basis-Text anpassen */
+    }
 }
 
 .top-heder {
@@ -42,7 +64,6 @@ h1 {
 
 h1 {
   margin: 0;
-  font-size: 36px;
   color: #c00;
 }
 
@@ -91,6 +112,12 @@ h2 {
     text-align: center;
     padding: 10px;
     caption-side: top;
+    background-color: #a79696;
+    border-radius: 10px;
+    margin: 50px;
+    padding: 20px;
+    
+   
     
 }
 
@@ -111,6 +138,13 @@ table {
 
 .allergien {
     text-align: right;
+    background-color: #fff;
+    padding: 30px;
+}
+.allergen-box {
+    width: 300px;
+    margin-left: auto;
+    margin-right: 30px;
 }
 
 .erfahrungstext {
@@ -144,6 +178,15 @@ table {
     font-size: 25px;
 }
 
+.legend {
+    background-color: #a79696;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(75, 4, 4);
+    box-shadow: 5px 5px 10px rgb(116, 114, 109);
+}
+
+
 input:focus {
   border-color: limegreen;
   outline: none;
@@ -164,10 +207,43 @@ input:focus {
     margin: 90px ;
 }
 
-.legend {
-    background-color: #a79696;
+.card-container {
+    display: flex;
+    gap: 16px; /* Abstand zwischen den Karten */
+    flex-wrap: wrap; /* Erlaubt Karten, in die nächste Zeile zu springen */
+   
+}
+
+.card {
+    background-color: #f9f9f99f;
+    border: 2px solid #db1616;
+    color: #c00;
+    border-radius: 8px;
     padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgb(75, 4, 4);
-    box-shadow: 5px 5px 10px rgb(116, 114, 109);
+    width: 90px;
+    box-shadow: 3px 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 10px 4px 6px rgba(190, 132, 15, 0.1);
+    text-align: center;
+
+}
+
+.card:hover {
+     transform: translateY(-5px) scale(1.05);
+     box-shadow: 10px 4px 6px rgba(190, 132, 15, 0.1);;
+     background-color: #2980b9;
+}
+.card:active {
+      transform: scale(0.98);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2),
+      0px 8px 20px rgba(255, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column; /* Von Reihe zu Spalte wechseln */
+        align-items: center;    /* Alles zentrieren */
+        gap: 10px;
+    }
 }
